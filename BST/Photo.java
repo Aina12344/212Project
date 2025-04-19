@@ -32,12 +32,12 @@ return tagsCopy;
 }
 
 public String toString() {
-String str = "Photo{" + "path=" + path + ", photoTags=" ;
+String result = "Photo{" + "path=" + path + ", photoTags=" ;
 photoTags.findFirst();
 while ( ! photoTags.last()) {
-str += photoTags.retrieve().toString() + "; ";
+result += photoTags.retrieve().toString() + "; ";
 photoTags.findNext();
 }    
-str += photoTags.retrieve().toString()  + "}";
-return str ;
+result += photoTags.retrieve().toString()  + "}";
+return result ;
 } }
