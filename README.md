@@ -1,4 +1,4 @@
-# CSC212 Project
+# CSC212 Project: Developing a Photo Management Application
 
 
 ### Group #24
