@@ -71,14 +71,18 @@ public class Album {
     }
 
     private boolean allAvailable(LinkedList<String> AllTags, String[] Arr) {
-        boolean continue1 = true;
+
+        boolean contin = true;
+
         if (AllTags.empty()) {
-            continue1 = false;
-        } else {
-            for (int i = 0; i < Arr.length && continue1; i++) {
+            contin = false;
+        }
+        else {
+            for (int i = 0; i < Arr.length && contin; i++) {
                 boolean tagMatched = false;
                 AllTags.findFirst();
                 while (!AllTags.last()) {
+
                     this.NbComps++;
                     if (AllTags.retrieve().compareToIgnoreCase(Arr[i]) == 0) {
                         tagMatched = true;
@@ -87,7 +91,7 @@ public class Album {
                     AllTags.findNext();
                 }
 
-                // Check the last tag
+                // Checkes the last tag
                 if (!tagMatched) {
                     this.NbComps++;
                     if (AllTags.retrieve().compareToIgnoreCase(Arr[i]) == 0) {
@@ -96,10 +100,10 @@ public class Album {
                 }
 
                 if (!tagMatched) {
-                    continue1 = false;
+                    contin = false;
                 }
             }
         }
-        return continue1;
+        return contin;
     }
 }
