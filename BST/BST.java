@@ -86,40 +86,7 @@ public class BST<T> {
                 }
         }
 
-        public boolean remove_key (String tkey){
-                Boolean removed = false;
-                BSTNode<T> p;
-                p = remove_aux(tkey, root, removed);
-                current = root = p;
-                return removed;
-        }
-
-        private BSTNode<T> remove_aux(String  key, BSTNode<T> p, boolean flag) {
-                BSTNode<T> q, child = null;
-                if(p == null)
-                        return null;
-                if(key.compareToIgnoreCase(p.key) <0)
-                        p.left = remove_aux(key, p.left, flag); //go left
-                else if(key.compareToIgnoreCase(p.key) > 0)
-                        p.right = remove_aux(key, p.right, flag); //go right
-                else {
-                        flag = true;
-                        if (p.left != null && p.right != null){ //two child
-                                q = find_min(p.right);
-                                p.key = q.key;
-                                p.data = q.data;
-                                p.right = remove_aux(q.key, p.right, flag);
-                        }
-                else {
-                                if (p.right == null) //one child
-                                        child = p.left;
-                                else if (p.left == null) //one child
-                                        child = p.right;
-                                return child;
-                        }
-                }
-                return p;
-        }
+        
 
         private BSTNode<T> find_min(BSTNode<T> p)
         {
