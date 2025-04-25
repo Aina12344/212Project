@@ -17,7 +17,7 @@ public class Album {
         return name;
     }
 
-    // Return the condition associated with the album
+    // Return the condition with the album
     public String getCondition() {
         return condition;
     }
@@ -27,7 +27,7 @@ public class Album {
         return manager;
     }
 
-    // Return all photos that satisfy the album condition
+    // Return all photos that apply the album condition
     public LinkedList<Photo> getPhotos() {
         LinkedList<Photo> photos1 = manager.getPhotos();
         LinkedList<Photo> photos2 = new LinkedList<Photo>();
@@ -54,7 +54,7 @@ public class Album {
                 }
             }
 
-            //Handle last photo separately
+            //Handle last photo alone
             Photo lastPhoto = photos2.retrieve();
             if (!allAvailable(lastPhoto.getTags(), Array)) {
                 photos2.remove();
@@ -91,7 +91,7 @@ public class Album {
                     AllTags.findNext();
                 }
 
-                //Checkes the last tag
+                //Checke the last tag
                 if (!tagMatched) {
                     this.NbComps++;
                     if (AllTags.retrieve().compareToIgnoreCase(Arr[i]) == 0) {
