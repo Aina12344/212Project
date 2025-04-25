@@ -54,7 +54,7 @@ public class Album {
                 }
             }
 
-            // Handle last photo separately
+            //Handle last photo separately
             Photo lastPhoto = photos2.retrieve();
             if (!allAvailable(lastPhoto.getTags(), Array)) {
                 photos2.remove();
@@ -65,7 +65,7 @@ public class Album {
         return photos2;
     }
 
-    // Return the number of tag comparisons used to find all photos of the album
+    //Return the number of tag comparisons used to find all photos of the album
     public int getNbComps() {
         return NbComps;
     }
@@ -91,7 +91,7 @@ public class Album {
                     AllTags.findNext();
                 }
 
-                // Checkes the last tag
+                //Checkes the last tag
                 if (!tagMatched) {
                     this.NbComps++;
                     if (AllTags.retrieve().compareToIgnoreCase(Arr[i]) == 0) {
