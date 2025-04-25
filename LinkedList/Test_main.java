@@ -51,19 +51,20 @@ public class Test_main {
    
  // For LinkedList<String>
    private static void PrintPhotos(LinkedList<String> list){
-     if (list.empty()) return;
-
-    list.findFirst();
-    while (!list.last()) {
-        System.out.print(list.retrieve() + " ");
-        list.findNext();
-    }
+      if (list.empty()) 
+         return;
+   
+      list.findFirst();
+      while (!list.last()) {
+         System.out.print(list.retrieve() + " ");
+         list.findNext();
+      }
     // Print the last element
-    System.out.print(list.retrieve());
-}   
+      System.out.print(list.retrieve());
+   }   
+
 
 // For LinkedList<Photo>
-
    private static void PrintPhotosL(LinkedList<Photo> list){
       if (list.empty()) 
          return;
