@@ -18,12 +18,12 @@ public class Test_main {
       System.out.println("Get photo1 path and tags:");
       System.out.println("photo1 path: " + photo1.getPath());
         
-        //You can get the list of tags of photo1 by calling photo1.getTags().
+     //You can get the list of tags of photo1 by calling photo1.getTags().
       LinkedList<String> tags = photo1.getTags();
         
-        //You can write a method that prints the list of tags of photo1.
+     //You can write a method that prints the list of tags of photo1.
       System.out.println(photo1.getPath());
-      PrintPhotos(tags);
+      PrintTags(tags);
         
       System.out.println("\n\nGet album2 name, condition, and photos:");
       System.out.println("album2 name: " + album2.getName());
@@ -34,7 +34,7 @@ public class Test_main {
         
         //You can write a method that prints the list of photos in album2.
       System.out.println(album2.getCondition());
-      PrintPhotosL(photos);
+      PrintPhotos(photos);
         
       System.out.println("Delete the photo ’bear.jpg’:");
       manager.deletePhoto("bear.jpg");
@@ -50,7 +50,7 @@ public class Test_main {
    }
    
  // For LinkedList<String>
-   private static void PrintPhotos(LinkedList<String> list){
+   private static void PrintTags(LinkedList<String> list){
       if (list.empty()) 
          return;
    
@@ -65,7 +65,7 @@ public class Test_main {
 
 
 // For LinkedList<Photo>
-   private static void PrintPhotosL(LinkedList<Photo> list){
+   private static void PrintPhotos(LinkedList<Photo> list){
       if (list.empty()) 
          return;
    

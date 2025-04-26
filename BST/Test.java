@@ -20,23 +20,23 @@ public class Test {
       System.out.println("Get photo1 path and tags:");
       System.out.println("photo1 path: " + photo1.getPath());
         
-        //You can get the list of tags of photo1 by calling photo1.getTags().
+      //get the list of tags of photo1 by calling photo1.getTags().
       LinkedList<String> tags = photo1.getTags();
         
-        //You can write a method that prints the list of tags of photo1.
+      //write a method that prints the list of tags of photo1.
       System.out.println(photo1.getPath());
-      printLL(tags);
+      PrintTags(tags);
         
       System.out.println("\n\nGet album1 name, condition, and photos:");
       System.out.println("album1 name: " + album1.getName());
       System.out.println("album1 condition: " + album1.getCondition());
         
-         //You can get the list of photos in album2 by calling album2.getPhotos().
+      //You can get the list of photos in album2 by calling album2.getPhotos().
       LinkedList<Photo> photos = album1.getPhotos();
         
-        //You can write a method that prints the list of photos in album2.
+      //You can write a method that prints the list of photos in album2.
       System.out.println(album1.getCondition());
-      printLLPhoto(photos);
+      PrintPhotos(photos);
              
       System.out.println("\n\nGet album2 name, condition, and photos:");
       System.out.println("album2 name: " + album2.getName());
@@ -46,7 +46,7 @@ public class Test {
       photos = album2.getPhotos();
    //You can write a method that prints the list of photos in album2.
       System.out.println(album2.getCondition());
-      printLLPhoto(photos);
+      PrintPhotos(photos);
       
       System.out.println("\n\nGet album3 name, condition, and photos:");
       System.out.println("album3 name: " + album3.getName());
@@ -55,7 +55,7 @@ public class Test {
       photos = album3.getPhotos();
    //You can write a method that prints the list of photos in album2.
       System.out.println(album3.getCondition());
-      printLLPhoto(photos);
+      PrintPhotos(photos);
         
       System.out.println("Delete the photo ’bear.jpg’:");
       manager.deletePhoto("bear.jpg");
@@ -74,7 +74,7 @@ public class Test {
 
      
  // For LinkedList<String>
-   private static void PrintPhotos(LinkedList<String> list){
+   private static void PrintTags(LinkedList<String> list){
       if (list.empty()) 
          return;
    
@@ -88,7 +88,7 @@ public class Test {
    }   
 
 // For LinkedList<Photo>
-   private static void PrintPhotosL(LinkedList<Photo> list){
+   private static void PrintPhotos(LinkedList<Photo> list){
       if (list.empty()) 
          return;
    
