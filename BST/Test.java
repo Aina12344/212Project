@@ -31,10 +31,10 @@ public class Test {
       System.out.println("album1 name: " + album1.getName());
       System.out.println("album1 condition: " + album1.getCondition());
         
-      //You can get the list of photos in album2 by calling album2.getPhotos().
+      //get the list of photos in album2 by calling album2.getPhotos().
       LinkedList<Photo> photos = album1.getPhotos();
         
-      //You can write a method that prints the list of photos in album2.
+      //write a method that prints the list of photos in album2.
       System.out.println(album1.getCondition());
       PrintPhotos(photos);
              
@@ -42,18 +42,20 @@ public class Test {
       System.out.println("album2 name: " + album2.getName());
       System.out.println("album2 condition: " + album2.getCondition());
         
-   //You can get the list of photos in album2 by calling album2.getPhotos().
+     //get the list of photos in album2 by calling album2.getPhotos().
       photos = album2.getPhotos();
-   //You can write a method that prints the list of photos in album2.
+      
+    //write a method that prints the list of photos in album2.
       System.out.println(album2.getCondition());
       PrintPhotos(photos);
       
       System.out.println("\n\nGet album3 name, condition, and photos:");
       System.out.println("album3 name: " + album3.getName());
       System.out.println("album3 condition: " + album3.getCondition());
-   //You can get the list of photos in album2 by calling album2.getPhotos().
+   //get the list of photos in album2 by calling album2.getPhotos().
       photos = album3.getPhotos();
-   //You can write a method that prints the list of photos in album2.
+      
+   //write a method that prints the list of photos in album2.
       System.out.println(album3.getCondition());
       PrintPhotos(photos);
         
@@ -73,7 +75,7 @@ public class Test {
    
 
      
- // For LinkedList<String>
+ //For LinkedList<String>
    private static void PrintTags(LinkedList<String> list){
       if (list.empty()) 
          return;
@@ -87,7 +89,7 @@ public class Test {
       System.out.print(list.retrieve());
    }   
 
-// For LinkedList<Photo>
+//For LinkedList<Photo>
    private static void PrintPhotos(LinkedList<Photo> list){
       if (list.empty()) 
          return;
@@ -97,7 +99,7 @@ public class Test {
          System.out.println(list.retrieve().getPath());
          list.findNext();
       }
-    // Print the last photo path
+    //Print the last photo path
       System.out.println(list.retrieve().getPath());
    } 
 }
