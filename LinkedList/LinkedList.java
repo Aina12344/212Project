@@ -16,7 +16,10 @@ public class LinkedList<T> {
    public boolean empty () {
       return head == null;
    }
-   public boolean last () {
+   public boolean last() {
+      if (current == null) {
+         return true;
+      }
       return current.next == null;
    }
    public boolean full () {
@@ -28,7 +31,10 @@ public class LinkedList<T> {
    public void findNext () {
       current = current.next;
    }
-   public T retrieve () {
+   public T retrieve() {
+      if (current == null) {
+         return null; 
+      }
       return current.data;
    }
    public void update (T val) {
